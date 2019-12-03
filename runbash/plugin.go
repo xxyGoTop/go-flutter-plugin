@@ -18,7 +18,7 @@ var _ flutter.Plugin = &RunBashPlugin{}
 // InitPlugin ...
 func (p *RunBashPlugin) InitPlugin(messenger plugin.BinaryMessenger) error {
 	channel := plugin.NewMethodChannel(messenger, channelName, plugin.StandardMethodCodec{})
-	channel.HandleFunc("run_bash", p.run)
+	channel.HandleFunc("run", p.run)
 	return nil
 }
 
